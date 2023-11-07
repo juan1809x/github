@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipo 01 | Etiquetado HTML5</title>
+    <link rel="stylesheet" href="cssgit.css">
+</head>
+<body>
+
+    <main id="cuerpo">
+
+       <div id="forma_prueba">
+            <H1>AGREGA LOS DOS NUMEROS QUE DESEAS SUMAR</H1>
+            <label for="num_a">Numero A</label>
+
+            <input type="tel" name="num_a" id="num_a" inputmode="numeric" pattern="[0-9]"  required>
+
+            <label for="num_b">Numero b</label>
+
+            <input type="tel" name="num_b" id="num_b" inputmode="numeric" pattern="[0-9]" required>
+
+            <button onclick="valoresnum()">ENTRAR</button>   
+            
+        </div>
+        <div id="resultado"></div>
+        
+<script>
+    function valoresnum() {
+        let num_a=parseFloat(document.getElementById("num_a").value);
+        let num_b=parseFloat(document.getElementById("num_b").value);
+        let suma=(num_a+num_b);
+        let resta=(num_a-num_b);
+        let multipli=(num_a*num_b);
+        let division=(num_a/num_b);
+        document.getElementById("resultado").innerHTML = "los resultados son <br>SUMA: "+suma+"<br>RESTA: "+resta+"<br>MULTIPLICACION: "+multipli+"<br>DIVISION: "+division;
+    }
+
+</script>
+
+    </main>
+
+</body>
+</html>
